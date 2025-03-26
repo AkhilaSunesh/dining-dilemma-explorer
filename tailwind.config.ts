@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				apple: {
+					blue: '#0A84FF',
+					indigo: '#5E5CE6',
+					purple: '#BF5AF2',
+					black: '#1D1D1F',
+					darkgray: '#333336',
+					gray: '#86868B',
+					lightgray: '#F5F5F7'
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,58 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1', transform: 'translateY(0)' },
+					'100%': { opacity: '0', transform: 'translateY(10px)' }
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'scale-out': {
+					from: { transform: 'scale(1)', opacity: '1' },
+					to: { transform: 'scale(0.95)', opacity: '0' }
+				},
+				'slide-in': {
+					'0%': { transform: 'translateX(-20px)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-out': {
+					'0%': { transform: 'translateX(0)', opacity: '1' },
+					'100%': { transform: 'translateX(20px)', opacity: '0' }
+				},
+				'rotate-fork': {
+					'0%': { transform: 'rotate(0deg)' },
+					'25%': { transform: 'rotate(-45deg)' },
+					'75%': { transform: 'rotate(45deg)' },
+					'100%': { transform: 'rotate(0deg)' }
+				},
+				'pulse-subtle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-out': 'fade-out 0.5s ease-out',
+				'scale-in': 'scale-in 0.5s ease-out',
+				'scale-out': 'scale-out 0.5s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out',
+				'slide-out': 'slide-out 0.5s ease-out',
+				'rotate-fork': 'rotate-fork 2s ease-in-out infinite',
+				'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
 			}
 		}
 	},
